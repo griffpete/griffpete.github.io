@@ -1,0 +1,536 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-rows: repeat(41, minmax(0px, 100px));
+    grid-template-columns: minmax(10px,1fr) repeat(6, minmax(0px, 200px)) minmax(10px,1fr);
+    background-color:#262626;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#nav {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    position: sticky;
+    top: 0;
+    height: 5rem;
+    z-index: 2;
+}
+
+nav ul {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-flow: row nowrap;
+    list-style-type: none;
+
+}
+
+nav ul li {
+    padding-left: 50px; 
+    padding-top: 1rem;
+    font-family:sans-serif;
+}
+
+nav a {
+    text-decoration: none;
+    color: #D9D9D9;
+}
+
+main {
+    grid-column: 2 / -2;
+    grid-row: 1 / -1;
+    height: auto;
+}
+
+#sandhero {
+    background-image: url(images/sandhero.jpg);
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    grid-column: 1 / -1;
+    grid-row: 1 / 10;
+}
+
+#my_name {
+    grid-column: 2 / -2;
+    grid-row: 3 / 4;
+    color: #fefefe;
+    text-align: center;
+    font-size: 3rem;
+    font-family:sans-serif;
+    padding: 100px;
+}
+
+
+
+#about {
+    text-align: left;
+    color: #fefefe;
+    font-size: 4rem;
+    font-family:sans-serif;
+    padding-top: 3.5rem;
+    padding-left: 1rem;
+    grid-row: 10 / 11;
+    grid-column: 2 / -2;
+}
+
+.greenbar {
+    background-color: #115959;
+    border-radius: 1rem;
+    height: 2rem;
+    width: 20rem;
+    grid-column: 2 / 4;
+
+}
+
+#green1 {
+    grid-row: 11 / 12;
+    margin-top: 2rem;
+}
+
+.greybar {
+    background-color: #595959;
+    border-radius: 1rem;
+    height: auto;
+    width: auto;
+    padding-bottom: 8rem;
+    position: relative;
+
+}
+
+#grey1 {
+    grid-row: 12 / 13;
+    grid-column: 2 / -2;
+}
+
+#grey2 {
+    grid-row: 14 / 15;
+    grid-column: 2 / -2;
+}
+
+#grey3 {
+    grid-row: 16 / 17;
+    grid-column: 2 / -2;
+}
+
+.icon {
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+#computericon {
+    height: 110px;
+}
+
+.description {
+    text-align: left;
+    color: #fefefe;
+    font-family:sans-serif;
+    margin-left: 10rem;
+    position: absolute;
+    top: 3.5rem;
+}
+
+#mounthero {
+    background-image: url(images/mounthero.jpg);
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    grid-column: 1 / -1;
+    grid-row: 20 / 30;
+}
+
+#projects {
+    text-align: left;
+    color: #404040;
+    font-size: 4rem;
+    font-family:sans-serif;
+    padding-top: 3.5rem;
+    padding-left: 1rem;
+    grid-row: 20 / 21;
+    grid-column: 2 / -2;
+}
+
+#green2 {
+    grid-row: 21 / 22;
+    margin-top: 2rem;
+}
+
+#greyback {
+    background-color: #595959;
+    opacity: 75%;
+    border-radius: 3rem;
+    height: auto;
+    width: auto;
+    padding-bottom: 8rem;
+    position: relative;
+    grid-row: 22 / 29;
+    grid-column: 2 / -2;
+}
+
+.circle {
+    border-radius: 100%;
+    width: 225px;
+    height: 225px;
+    z-index: 1;
+    background-image: url(images/project_image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.projects {
+    z-index: 3;
+    margin-left: 6rem;
+    color: #fefefe;
+    font-family:sans-serif;
+    font-size: 1.5rem;
+}
+
+.project-txt {
+    z-index: 2;
+    margin-left: 6rem;
+    color: #fefefe;
+    font-family:sans-serif;
+    margin-top: 2rem;
+}
+
+#circ1 {
+    grid-row: 22;
+    grid-column: 2;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+#project1-title {
+    grid-row: 23;
+    grid-column: 3;
+}
+
+#project1-txt {
+    grid-row: 23;
+    grid-column: 3 / 7;
+}
+
+#circ2 {
+    grid-row: 24;
+    grid-column: 6;
+    margin-top: 2.5rem;
+    margin-left: 9rem;
+}
+
+#project2-title {
+    grid-row: 25;
+    grid-column: 3 / 7;
+    margin-right: 5rem;
+    text-align: right;
+}
+
+#project2-txt {
+    grid-row: 25;
+    grid-column: 3 / 7;
+    margin-right: 5rem;
+    text-align: right;
+}
+
+#circ3 {
+    grid-row: 26;
+    grid-column: 2;
+    margin-left: 2rem;
+    margin-top: 3rem;
+}
+
+#project3-title {
+    grid-row: 27;
+    grid-column: 3;
+}
+
+#project3-txt {
+    grid-row: 27;
+    grid-column: 3 / 7;
+}
+
+#links {
+    grid-row: 30;
+}
+
+#link_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-column: 3 / -3;
+    grid-row: 31;
+}
+
+.link {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #404040;
+}
+
+#resume {
+    background-image: url(images/resume.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100px;
+    background-position: center;
+}
+
+#github {
+    background-image: url(images/github.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 125px;
+    background-position: center;
+}
+
+#twitter {
+    background-image: url(images/twitter.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100px;
+    background-position: center;
+}
+
+#contact {
+    text-align: left;
+    color: #D9D9D9;
+    font-size: 4rem;
+    font-family:sans-serif;
+    padding-top: 3.5rem;
+    padding-left: 1rem;
+    grid-row: 33;
+    grid-column: 2 / -2;
+}
+
+#green3 {
+    grid-row: 34;
+    margin-top: 2rem;
+}
+
+#greyback2 {
+    grid-column: 2 / -2;
+    grid-row: 35 / 40;
+    height: auto;
+    width: auto;
+    border-radius: 2rem;
+    background-color: #333333;
+}
+
+form {
+    grid-row: 36;
+    grid-column: 2 / -2;
+    margin-left: 2rem;
+}
+
+input {
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+form label {
+    color: #fefefe;
+    font-size: 2rem;
+    font-family:sans-serif;
+
+}
+
+#name {
+    height: 35px;
+    width: 500px;
+    margin-bottom: 2rem;
+}
+
+#email {
+    height: 35px;
+    width: 500px;
+    margin-bottom: 2rem;
+}
+
+#phone {
+    height: 35px;
+    width: 500px;
+    margin-bottom: 2rem;
+}
+
+#message {
+    height: 35px;
+    width: 500px;
+}
+
+textarea {
+    margin-left: 1rem;
+}
+
+#button {
+    background-color: #115959;
+    border: none;
+    height: 50px;
+    width: 200px;
+    border-radius: .5rem;
+    color: #1F1F1F;
+    font-size: 1rem;
+    font-family:sans-serif;
+}
+
+
+
+
+
+@media screen and (max-width: 992px) {
+    #wrapper {
+        grid-template-columns: minmax(0px,1fr) repeat(6, minmax(0px, 100px)) minmax(0px,1fr);
+    }
+    .description {
+        top: 1rem;
+        font-size: large;
+    }
+    #nav {
+        position: relative;
+    }
+    #sandhero {
+        background-image: url(images/sandhero_comp.jpg);
+    }
+    #greyback {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .circle {
+        width: 150px;
+        height: 150px;
+    }
+    #circ2 {
+        grid-column: 2;
+        margin-left: 2rem;
+        margin-top: 3rem;
+    }
+    #project2-title {
+        margin-right: 5rem;
+        text-align: left;
+    }
+    
+    #project2-txt {
+        margin-right: 5rem;
+        text-align: left;
+    }
+    #project1-title {
+        grid-column: 3 / 7;
+    }
+    #project3-title {
+        grid-column: 3 / 7;
+    }
+   
+    
+    #link_section {
+        grid-column: 1 / -1;
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+    .link {
+        width: 100px;
+        height: 100px;
+    }
+    #resume {
+        background-size: 75px;
+    }
+    #github {
+        background-size: 75px;
+    }
+    #twitter {
+        background-size: 75px;
+    }
+    #greyback2 {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        grid-row: 35 / 41;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    #wrapper {
+        grid-template-columns: 100%;
+    }
+    .description {
+        font-size: small;
+        margin-right: 1rem;
+    }
+    .greybar {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    #about {
+        margin-left: 1rem;
+        font-size: 3rem;
+    }
+    .greenbar {
+        grid-column: 2 / -2;
+        margin-left: 1rem;
+    }
+    #name {
+        font-size: 2rem;
+
+    }
+    nav ul li {
+        padding-left: 20px;
+    }
+    #circ1 {
+        grid-column: 1 / -1;
+    }
+    #circ2 {
+        grid-column: 1 / -1;
+    }
+    #circ3 {
+        grid-column: 1 / -1;
+    }
+    #project1-title {
+        grid-column: 1 / -1;
+        margin-left: 14rem;
+    }
+    #project1-txt {
+        grid-column: 1 / -1;
+        margin-left: 14rem;
+    }
+    #project2-title {
+        grid-column: 1 / -1;
+        margin-left: 14rem;
+    }
+    #project2-txt {
+        grid-column: 1 / -1;
+        margin-left: 14rem;
+    }
+    #project3-title {
+        grid-column: 1 / -1;
+        margin-left: 14rem;
+    }
+    #project3-txt {
+        grid-column: 1 / -1;
+        margin-left: 14rem;
+    }
+    #link_section {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    #name {
+        width: 200px;
+    }
+    #email {
+        width: 200px;
+    }
+    #phone {
+        width: 300px;
+    }
+    #message {
+        width: 300px;
+    }
+}
